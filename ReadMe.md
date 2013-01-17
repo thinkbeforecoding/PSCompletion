@@ -96,7 +96,7 @@ Test-ParameterCompleter also :
 - CommandName: proposes registered completer function names
 - ParameterName: proposes registered parameters for selected function
 
-
+You can read the code to see how it's done.
 
 Have fun ! 
 
