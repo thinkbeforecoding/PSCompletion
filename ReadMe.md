@@ -5,7 +5,7 @@ jeremie.chassaing / thinkbeforecoding
 
 http://thinkbeforecoding.com
 
-This PowerShell modules provides tool to create custom (and dynamic !) parameter completion.
+This PowerShell modules provides tools to create custom (and dynamic !) parameter completion.
 It's intended to make it easy to write and test.
 
 Installation
