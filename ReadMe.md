@@ -8,14 +8,15 @@ Installation
 ============
 
 Install this module in your usual PS module directory.
-If you don't have one,
-create a Modules directory where you want, copy the PSCompletion folder into it.
+If you don't have one, create a Modules directory where you want, copy the PSCompletion folder into it.
 Add then the Modules directory path to the PSModulePath environment variable.
 You can do it by adding the following line to the %User%/Documents/WindowsPowerShell/Profile.ps1 file :
-$env:PSModulePath += ';*PathToYouModuleFile*'
+
+   $env:PSModulePath += ';*PathToYouModuleFile*'
 
 You can also load this module by default in your profile.ps1 file :
-Import-Module PSCompletion
+
+   Import-Module PSCompletion
 
 You can then use it in your own modules or functions.
 
@@ -34,6 +35,7 @@ Say you have a function with 2 parameters :
 	}
 
 You can provide completion for the second parameter this way:
+
 	Register-ParameterCompleter Test-Info Param2 {
 		param($commandName, $parameterName, $wordToComplete, $commandAst, $fakeBoundParameter)
 		Get-Info -Filter $fakeBoundParameter['Param1'] `
@@ -54,7 +56,8 @@ $fakeBoundParameter is a hashtable of specified parameters. When completion is c
 Param1 has usualy been provided and can be used to narrow the selection.
 
 $commandName and $parameterName contains the Command and Parameter names. It can be usefull when
-   using the same script block for several commands/parameters like this :
+using the same script block for several commands/parameters like this :
+
     $completer = { 
 	     param($commandName, $parameterName, $wordToComplete, $commandAst, $fakeBoundParameter)
 	     # ...
@@ -70,6 +73,7 @@ The New-CompletionResult command takes three parameters :
 
 
 Test-ParameterComplete is usefull to test completion script blocks.
+
 	Test-ParameterCompleter 'Get-Info' 'Param2' '*val' @{Param1='SomeValue'}
 
 This will call the previously register parameter completer with the $wordToComplete variable
