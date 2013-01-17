@@ -2,6 +2,7 @@ PSCompletion Powershell module
 ==============================
 
 jeremie.chassaing / thinkbeforecoding
+
 http://thinkbeforecoding.com
 
 Installation
@@ -9,14 +10,15 @@ Installation
 
 Install this module in your usual PS module directory.
 If you don't have one, create a Modules directory where you want, copy the PSCompletion folder into it.
+
 Add then the Modules directory path to the PSModulePath environment variable.
 You can do it by adding the following line to the %User%/Documents/WindowsPowerShell/Profile.ps1 file :
 
-   $env:PSModulePath += ';*PathToYouModuleFile*'
+    $env:PSModulePath += ';*PathToYouModuleFile*'
 
 You can also load this module by default in your profile.ps1 file :
 
-   Import-Module PSCompletion
+    Import-Module PSCompletion
 
 You can then use it in your own modules or functions.
 
@@ -99,4 +101,5 @@ Test-ParameterCompleter also :
 Have fun ! 
 
 jeremie chassaing / thinkbeforecoding
+
 http://thinkbeforecoding.com
