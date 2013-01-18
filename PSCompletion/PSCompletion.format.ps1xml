@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Configuration>
+    <ViewDefinitions>
+        <View>
+            <Name>Completer</Name>
+            <ViewSelectedBy>
+                <TypeName>PSCompletion.Completer</TypeName>
+            </ViewSelectedBy>
+            <!--GroupBy>
+                <PropertyName>A</PropertyName>
+                <CustomControlName>Registry-GroupingFormat</CustomControlName>  
+            </GroupBy-->
+            <TableControl>
+                <TableHeaders>
+                    <TableColumnHeader>
+                        <Width>40</Width>
+                        <Label>CommandName</Label>
+                        <Alignment>left</Alignment>
+                    </TableColumnHeader>
+                    <TableColumnHeader>
+                        <Width>20</Width>
+                        <Label>ParmaeterName</Label>
+                        <Alignment>left</Alignment>
+                    </TableColumnHeader>
+                    <TableColumnHeader>
+                        <Width>60</Width>
+                        <Label>ScriptBlock</Label>
+                        <Alignment>left</Alignment>
+                    </TableColumnHeader>
+                </TableHeaders>
+                <TableRowEntries>
+                    <TableRowEntry>
+                        <TableColumnItems>
+                            <TableColumnItem>
+                                <PropertyName>CommandName</PropertyName>
+                            </TableColumnItem>
+                            <TableColumnItem>
+                                <PropertyName>ParameterName</PropertyName>
+                            </TableColumnItem>
+                            <TableColumnItem>
+                                <ScriptBlock>($_.ScriptBlock.ToString() -replace "\s+|`r`n|param\([^)]+\)", " ").Trim()</ScriptBlock>
+                            </TableColumnItem>
+                        </TableColumnItems>
+                    </TableRowEntry>
+                </TableRowEntries>
+            </TableControl>
+        </View>
+
+
+      
+    </ViewDefinitions>
+</Configuration>

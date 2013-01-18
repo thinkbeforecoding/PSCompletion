@@ -52,7 +52,7 @@ ScriptsToProcess = @()
 TypesToProcess = @()
 
 # Format files (.ps1xml) to be loaded when importing this module
-FormatsToProcess = @()
+FormatsToProcess = @('PSCompletion.format.ps1xml')
 
 # Modules to import as nested modules of the module specified in ModuleToProcess
 NestedModules = @()
@@ -62,6 +62,7 @@ FunctionsToExport = @(
 'Register-ParameterCompleter'
 'Test-ParameterCompleter'
 'New-CompletionResult'
+'Get-ParameterCompleter'
 )
 
 # Cmdlets to export from this module

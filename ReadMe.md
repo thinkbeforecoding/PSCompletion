@@ -28,10 +28,11 @@ You can then use it in your own modules or functions.
 Usage
 =====
 
-The modules contains 3 commands :
+The modules contains 4 commands :
 - Register-ParameterCompleter: registers a parameter completer
 - New-CompletionResult: creates a CompletionResult object used by PS completion
 - Test-ParameterCompleter : tests a parameter completer for debugging purpose
+- Get-ParameterCompleter : get a parameter completer
 
 Say you have a function with 2 parameters :
 
@@ -77,7 +78,7 @@ The New-CompletionResult command takes three parameters :
 - Tooltip : The tooltip to display next to items in ISE completion dropdown. It can be multiline.
 
 
-Test-ParameterComplete is usefull to test completion script blocks.
+Test-ParameterCompleter is usefull to test completion script blocks.
 
 	Test-ParameterCompleter 'Get-Info' 'Param2' '*val' @{Param1='SomeValue'}
 
@@ -86,6 +87,9 @@ set to '*val' and the $fakeBoundParameter containing Param1 to SomeValue
 
 You can put breakpoints in your completer script block or simply check error message and output
 to see if it matches expected result.
+
+Get-ParameterCompleter returns a filtered list of registerd completion script blocks.
+It can be usefull to review already registered completions.
 
 Hint
 ====
