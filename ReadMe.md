@@ -1,9 +1,11 @@
 PSCompletion Powershell module
 ==============================
 
+This repository has moved to Codeberg: https://codeberg.org/thinkbeforecoding/PSCompletion
+
 jeremie.chassaing / thinkbeforecoding
 
-http://thinkbeforecoding.com
+https://thinkbeforecoding.com
 
 This PowerShell modules provides tools to create custom (and dynamic !) parameter completion.
 It's intended to make it easy to write and test.
